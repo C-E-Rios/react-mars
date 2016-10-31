@@ -1,0 +1,31 @@
+{
+  "name": "mars",
+  "version": "1.0.0",
+  "description": "react sample app",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --inline --port 8888",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/C-E-Rios/react-mars.git"
+  },
+  "author": "Carlos Rios",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/C-E-Rios/react-mars/issues"
+  },
+  "homepage": "https://github.com/C-E-Rios/react-mars#readme",
+  "devDependencies": {
+    "babel": "^6.5.2",
+    "babel-core": "^6.18.0",
+    "babel-loader": "^6.2.7",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-react": "^6.16.0",
+    "eslint-plugin-react": "^6.4.1",
+    "html-webpack-plugin": "^2.24.1",
+    "webpack": "^1.13.3",
+    "webpack-dev-server": "^1.16.2"
+  }
+}
