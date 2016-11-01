@@ -10,12 +10,22 @@ class Image extends React.Component {
 
     render () {
 
+        const styles = {
+            base: {
+                display: 'block',
+                height: 'auto',
+                maxWidth: '100%'
+            }
+        };
+
         if (this.props.hideWidget) {
             return null;
         }
 
         return (
-            <img src={this.props.url} alt={this.props.description} />
+            <div>
+                <img style={styles.base} src={this.props.url} alt={this.props.description} />
+            </div>
         );
     }
 }

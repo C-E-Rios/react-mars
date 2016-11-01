@@ -16,6 +16,14 @@ class ImageCarousel extends React.Component {
 
     render () {
 
+        const styles = {
+            base: {
+                display: 'inline-block',
+                height: 'auto',
+                maxWidth: '50%'
+            }
+        };
+
         if (this.props.hideWidget) {
             return null;
         }
@@ -23,10 +31,10 @@ class ImageCarousel extends React.Component {
         return (
             <div>
                 <span>
-                    <img src={this.props.background_images[0].url} alt={this.props.background_images[0].description} />
+                    <img style={styles.base} src={this.props.background_images[0].url} alt={this.props.background_images[0].description} />
                 </span>
                 <span>
-                    <img src={this.props.background_images[1].url} alt={this.props.background_images[0].description} />
+                    <img style={styles.base} src={this.props.background_images[1].url} alt={this.props.background_images[0].description} />
                 </span>
             </div>
         );

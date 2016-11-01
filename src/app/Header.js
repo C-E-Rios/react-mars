@@ -1,5 +1,4 @@
 import React from 'react';
-import Radium from 'radium';
 import Hero from './Hero';
 import PostMeta from './PostMeta';
 
@@ -13,27 +12,22 @@ const propTypes = {
 
 class Header extends React.Component {
 
+    constructor (props) {
+        console.log(props);
+        super(props);
+    }
+
     render () {
+
         const props = this.props;
-        const style = {
-            base: {
-                background: 'blue',
-                color: 'red',
-                width: '25%',
-                ':hover': {
-                    background: '#eee'
-                }
-            }
-        };
 
         return (
             <div>
-                <div style={style.base}>Hellooooo</div>
                 <Hero
                     title={props.title}
                     category={props.acf.category.name}
                     options={props.acf.header_other_options}
-                    hero_images={props.acf.hero_images}
+                    hero_image={props.acf.hero_images[0]}
                     html={props.acf.html}
                     sell={props.acf.sell}
                     short_headline={props.acf.short_headline} />
@@ -44,8 +38,6 @@ class Header extends React.Component {
         );
     }
 }
-
-Header = Radium(Header);
 
 Header.propTypes = propTypes;
 

@@ -1,4 +1,5 @@
 import React from 'react';
+import { StyleRoot } from 'radium';
 import Header from './Header';
 import Widget from './Widget';
 
@@ -15,9 +16,9 @@ class Article extends React.Component {
     render () {
 
         const data = this.props.data;
-        
+
         return (
-            <div>
+            <StyleRoot>
                 {/* Header */}
                 <Header
                     type={data.type}
@@ -31,7 +32,7 @@ class Article extends React.Component {
                     return <Widget type={widget.acf_fc_layout} content={widget} key={index} />;
                 })}
 
-            </div>
+            </StyleRoot>
         );
     }
 }

@@ -7,14 +7,27 @@ const propTypes = {
 
 class Paragraph extends React.Component {
 
+
     render () {
+
+        const html = { __html: this.props.text };
+
+        const styles = {
+            base: {
+                maxWidth: '700px',
+                marginLeft: 'auto',
+                marginRight: 'auto'
+            }
+        };
 
         if (this.props.hideWidget) {
             return null;
         }
 
         return (
-            <p>{this.props.text}</p>
+            <div style={styles.base}>
+                <p dangerouslySetInnerHTML={html}></p>
+            </div>
         );
     }
 }
