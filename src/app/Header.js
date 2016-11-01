@@ -29,6 +29,12 @@ class Header extends React.Component {
     }
 }
 
-
+Header.propTypes = {
+    type: React.PropTypes.string,
+    title: React.PropTypes.string,
+    author: React.PropTypes.number,
+    date: React.PropTypes.string,
+    acf: React.PropTypes.object
+};
 
 export default Header;

@@ -13,4 +13,13 @@ class CategoryTag extends React.Component {
     }
 }
 
+/* Testing defaultProps */
+CategoryTag.defaultProps = {
+    category: 'Stylist'
+};
+
+CategoryTag.propTypes = {
+    category: React.PropTypes.string
+};
+
 export default CategoryTag;

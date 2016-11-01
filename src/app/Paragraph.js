@@ -1,17 +1,24 @@
 import React from 'react';
 
-class Paragraph extends React.Component {
+const propTypes = {
+    text: React.PropTypes.string,
+    hideWidget: React.PropTypes.bool
+};
 
-    constructor (props) {
-        super(props);
-    }
+class Paragraph extends React.Component {
 
     render () {
 
+        if (this.props.hideWidget) {
+            return null;
+        }
+
         return (
-            <p>{this.props.content.paragraph}</p>
+            <p>{this.props.text}</p>
         );
     }
 }
+
+Paragraph.propTypes = propTypes;
 
 export default Paragraph;

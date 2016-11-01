@@ -2,6 +2,10 @@ import React from 'react';
 import Header from './Header';
 import Widget from './Widget';
 
+const propTypes = {
+    data: React.PropTypes.object
+};
+
 class Article extends React.Component {
 
     constructor (props) {
@@ -17,7 +21,7 @@ class Article extends React.Component {
                 {/* Header */}
                 <Header
                     type={data.type}
-                    title={data.title}
+                    title={data.title.rendered}
                     author={data.author}
                     date={data.date}
                     acf={data.acf} />
@@ -31,5 +35,7 @@ class Article extends React.Component {
         );
     }
 }
+
+Article.propTypes = propTypes;
 
 export default Article;
