@@ -1,7 +1,7 @@
 import React from 'react';
 
 const propTypes = {
-    text: React.PropTypes.string,
+    text: React.PropTypes.string.isRequired,
     hideWidget: React.PropTypes.bool
 };
 

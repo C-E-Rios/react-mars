@@ -5,8 +5,8 @@ import PullQuote from './PullQuote';
 import ImageCarousel from './ImageCarousel';
 
 const propTypes = {
-    type: React.PropTypes.string,
-    content: React.PropTypes.object
+    type: React.PropTypes.string.isRequired,
+    content: React.PropTypes.object.isRequired
 };
 
 class Widget extends React.Component {

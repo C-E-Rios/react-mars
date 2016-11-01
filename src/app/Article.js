@@ -3,7 +3,7 @@ import Header from './Header';
 import Widget from './Widget';
 
 const propTypes = {
-    data: React.PropTypes.object
+    data: React.PropTypes.object.isRequired
 };
 
 class Article extends React.Component {

@@ -3,7 +3,7 @@ import CategoryTag from './CategoryTag';
 import ScrollButton from './ScrollButton';
 
 const propTypes = {
-    title: React.PropTypes.string,
+    title: React.PropTypes.string.isRequired,
     category: React.PropTypes.string,
     options: React.PropTypes.array,
     hero_images: React.PropTypes.array,

@@ -1,7 +1,7 @@
 import React from 'react';
 
 const propTypes = {
-    background_images: React.PropTypes.array,
+    background_images: React.PropTypes.array.isRequired,
     border: React.PropTypes.bool,
     buttons_size: React.PropTypes.string,
     crop: React.PropTypes.string,
@@ -19,7 +19,7 @@ class ImageCarousel extends React.Component {
         if (this.props.hideWidget) {
             return null;
         }
-                
+
         return (
             <div>
                 <span>

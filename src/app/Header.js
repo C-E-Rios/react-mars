@@ -2,6 +2,14 @@ import React from 'react';
 import Hero from './Hero';
 import PostMeta from './PostMeta';
 
+const propTypes = {
+    type: React.PropTypes.string,
+    title: React.PropTypes.string.isRequired,
+    author: React.PropTypes.number.isRequired,
+    date: React.PropTypes.string.isRequired,
+    acf: React.PropTypes.object.isRequired
+};
+
 class Header extends React.Component {
 
     constructor (props) {
@@ -29,12 +37,6 @@ class Header extends React.Component {
     }
 }
 
-Header.propTypes = {
-    type: React.PropTypes.string,
-    title: React.PropTypes.string,
-    author: React.PropTypes.number,
-    date: React.PropTypes.string,
-    acf: React.PropTypes.object
-};
+Header.propTypes = propTypes;
 
 export default Header;
