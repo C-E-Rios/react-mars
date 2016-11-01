@@ -1,4 +1,5 @@
 import React from 'react';
+import Radium from 'radium';
 import Hero from './Hero';
 import PostMeta from './PostMeta';
 
@@ -12,15 +13,22 @@ const propTypes = {
 
 class Header extends React.Component {
 
-    constructor (props) {
-        super(props);
-    }
-
     render () {
         const props = this.props;
+        const style = {
+            base: {
+                background: 'blue',
+                color: 'red',
+                width: '25%',
+                ':hover': {
+                    background: '#eee'
+                }
+            }
+        };
 
         return (
             <div>
+                <div style={style.base}>Hellooooo</div>
                 <Hero
                     title={props.title}
                     category={props.acf.category.name}
@@ -36,6 +44,8 @@ class Header extends React.Component {
         );
     }
 }
+
+Header = Radium(Header);
 
 Header.propTypes = propTypes;
 

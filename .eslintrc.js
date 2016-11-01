@@ -17,6 +17,7 @@ module.exports = {
         "react"
     ],
     "rules": {
+        "no-class-assign": 0,
         "no-console": [
             "warn"
         ],
