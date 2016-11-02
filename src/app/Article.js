@@ -13,6 +13,10 @@ class Article extends React.Component {
         super(props);
     }
 
+    createWidget () {
+        return (widget, index) => <Widget type={widget.acf_fc_layout} content={widget} key={index} />;
+    }
+
     render () {
 
         const data = this.props.data;
@@ -28,9 +32,7 @@ class Article extends React.Component {
                     acf={data.acf} />
 
                 {/* Widgets */}
-                {data.acf.widgets.map((widget, index) => {
-                    return <Widget type={widget.acf_fc_layout} content={widget} key={index} />;
-                })}
+                {data.acf.widgets.map(this.createWidget())}
 
             </StyleRoot>
         );

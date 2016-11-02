@@ -54,15 +54,17 @@ class Hero extends React.Component {
                 /* Unsure about this - Maybe hero_content should be its own component? */
                 hero_content: {
                     '@media (min-width: 320px)': {
-                        width: '90%'
+                        width: '90%',
+                        top: '70%'
                     },
                     '@media (min-width: 768px)': {
+                        top: '50%',
                         width: '50%'
                     },
                     left: '50%',
                     padding: '30px 10px',
                     position: 'absolute',
-                    top: '70%',
+                    top: '50%',
                     transform: 'translate(-50%,-50%)',
                     width: '50%',
                     zIndex: '10',

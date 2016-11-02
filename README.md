@@ -1,7 +1,7 @@
 ## react-mars
 Todo:
 * Hook up functionality for Scrollbutton
-* Finish applying styles
+* Finish applying styles - Fonts, icons, etc
 * Investigate best practices for css-in-js with react/radium
 
 ## Dependencies
