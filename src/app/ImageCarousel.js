@@ -34,7 +34,7 @@ class ImageCarousel extends React.Component {
                     <img style={styles.base} src={this.props.background_images[0].url} alt={this.props.background_images[0].description} />
                 </span>
                 <span>
-                    <img style={styles.base} src={this.props.background_images[1].url} alt={this.props.background_images[0].description} />
+                    <img style={styles.base} src={this.props.background_images[1].url} alt={this.props.background_images[1].description} />
                 </span>
             </div>
         );

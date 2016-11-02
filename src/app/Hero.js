@@ -31,12 +31,6 @@ class Hero extends React.Component {
                     position: 'relative',
                     textAlign: 'center',
                     backgroundImage: `url(${this.props.hero_image.sizes.portrait})`,
-                    '@media (min-width: 320px)': {
-                        backgroundImage: `url(${this.props.hero_image.sizes.portrait})`
-                    },
-                    '@media (min-width: 480px)': {
-                        backgroundImage: `url(${this.props.hero_image.sizes.portrait})`
-                    },
                     '@media (min-width: 768px)': {
                         backgroundImage: `url(${this.props.hero_image.sizes.landscape})`
                     }
@@ -53,34 +47,26 @@ class Hero extends React.Component {
                 },
                 /* Unsure about this - Maybe hero_content should be its own component? */
                 hero_content: {
-                    '@media (min-width: 320px)': {
-                        width: '90%',
-                        top: '70%'
-                    },
+                    left: '50%',
+                    padding: '30px 10px',
+                    position: 'absolute',
+                    top: '70%',
+                    transform: 'translate(-50%,-50%)',
+                    width: '90%',
+                    zIndex: '10',
                     '@media (min-width: 768px)': {
                         top: '50%',
                         width: '50%'
                     },
-                    left: '50%',
-                    padding: '30px 10px',
-                    position: 'absolute',
-                    top: '50%',
-                    transform: 'translate(-50%,-50%)',
-                    width: '50%',
-                    zIndex: '10',
                     h1: {
-                        '@media (min-width: 320px)': {
-                            fontSize: '2.5em'
-                        },
+                        fontSize: '2.5em',
                         '@media (min-width: 768px)': {
                             fontSize: '2em'
                         }
                     },
                     h3: {
                         fontWeight: '100',
-                        '@media (min-width: 320px)': {
-                            fontSize: '1.8em'
-                        },
+                        fontSize: '1.8em',
                         '@media (min-width: 768px)': {
                             fontSize: '1.3em'
                         }
