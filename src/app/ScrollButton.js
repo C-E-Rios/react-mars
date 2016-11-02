@@ -2,6 +2,15 @@ import React from 'react';
 
 class ScrollButton extends React.Component {
 
+    constructor (props) {
+        super(props);
+        this.smoothScroll = this.smoothScroll.bind(this);
+    }
+
+    smoothScroll () {
+        /* Call some fancy smooth scroll function */
+    }
+
     render () {
 
         const styles = {
@@ -18,12 +27,13 @@ class ScrollButton extends React.Component {
                 position: 'absolute',
                 bottom: '4%',
                 left: 'calc(50% - 25px)',
+                background: '#2abeaa'
             }
         };
 
 
         return (
-            <button style={styles.base}>SCROLL DOWN</button>
+            <button onClick={this.smoothScroll} style={styles.base}>SCROLL DOWN</button>
         );
     }
 }
