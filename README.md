@@ -12,5 +12,5 @@ Tools needed to run this app:
 * `npm install` to install dependencies
 
 ## Running the App
-* `npm start` to install dependencies
+* `npm start` to build application using webpack and launch webpack-dev-server 
 * `npm run clean` to clear cache, remove dependencies deleting node_modules
