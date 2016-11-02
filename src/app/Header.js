@@ -13,7 +13,6 @@ const propTypes = {
 class Header extends React.Component {
 
     constructor (props) {
-        console.log(props);
         super(props);
     }
 

@@ -1,4 +1,6 @@
 import React from 'react';
+import Radium from 'radium';
+
 import Paragraph from './Paragraph';
 import Image from './Image';
 import PullQuote from './PullQuote';
@@ -23,14 +25,17 @@ class Widget extends React.Component {
             <div>
                 {/* Conditionally display component based on type of widget */}
                 {this.props.type === 'paragraph' &&
-                    <Paragraph
-                        text={content.paragraph}
-                        hideWidget={content.hide_widget_from_page} />}
+                        <Paragraph
+                            text={content.paragraph}
+                            hideWidget={content.hide_widget_from_page} />
+                    }
 
                 {this.props.type === 'image' &&
                     <Image
                         url={content.image.url}
-                        description={content.image.description}
+                        width={content.width}
+                        position={content.position}
+                        description={content.image.alt}
                         hideWidget={content.hide_widget_from_page} />}
 
                 {this.props.type === 'pull-quote' &&
@@ -43,6 +48,7 @@ class Widget extends React.Component {
 
                 {this.props.type === 'image-carousel' &&
                     <ImageCarousel
+
                         background_images={content.background_images}
                         border={content.border}
                         buttons_size={content.buttons_size}
@@ -56,6 +62,8 @@ class Widget extends React.Component {
         );
     }
 }
+
+Widget = Radium(Widget);
 
 Widget.propTypes = propTypes;
 

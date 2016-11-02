@@ -1,8 +1,11 @@
 import React from 'react';
+import Radium from 'radium';
 
 const propTypes = {
     url: React.PropTypes.string,
     description: React.PropTypes.string,
+    width: React.PropTypes.string,
+    position: React.PropTypes.string,
     hideWidget: React.PropTypes.bool
 };
 
@@ -13,9 +16,28 @@ class Image extends React.Component {
         const styles = {
             base: {
                 display: 'block',
-                height: 'auto',
+                margin: '0 auto',
+                maxWidth: '100%',
+                '@media (min-width: 740px)': {
+                    maxWidth: '700px'
+                }
+            },
+            large: {
+                '@media (min-width: 533px)': {
+                    margin: '0 auto',
+                    maxWidth: '960px'
+                }
+            },
+            medium: {
+                '@media (min-width: 740px)': {
+                    margin: '0 auto',
+                    maxWidth: '960px'
+                }
+            },
+            img: {
                 maxWidth: '100%'
             }
+
         };
 
         if (this.props.hideWidget) {
@@ -23,12 +45,14 @@ class Image extends React.Component {
         }
 
         return (
-            <div>
-                <img style={styles.base} src={this.props.url} alt={this.props.description} />
+            <div style={[styles.base, styles[this.props.width]]}>
+                <img style={styles.img} src={this.props.url} alt={this.props.description} />
             </div>
         );
     }
 }
+
+Image = Radium(Image);
 
 Image.propTypes = propTypes;
 

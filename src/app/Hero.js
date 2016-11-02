@@ -17,7 +17,6 @@ const propTypes = {
 class Hero extends React.Component {
 
     constructor (props) {
-        console.log(props);
         super(props);
     }
 
