@@ -30,6 +30,10 @@ class Hero extends React.Component {
                 base: {
                     position: 'relative',
                     textAlign: 'center',
+                    backgroundImage: `url(${this.props.hero_image.sizes.portrait})`,
+                    '@media (min-width: 320px)': {
+                        backgroundImage: `url(${this.props.hero_image.sizes.portrait})`
+                    },
                     '@media (min-width: 480px)': {
                         backgroundImage: `url(${this.props.hero_image.sizes.portrait})`
                     },
@@ -49,15 +53,35 @@ class Hero extends React.Component {
                 },
                 /* Unsure about this - Maybe hero_content should be its own component? */
                 hero_content: {
+                    '@media (min-width: 320px)': {
+                        width: '90%'
+                    },
+                    '@media (min-width: 768px)': {
+                        width: '50%'
+                    },
                     left: '50%',
-                    padding: '0',
+                    padding: '30px 10px',
                     position: 'absolute',
                     top: '70%',
                     transform: 'translate(-50%,-50%)',
                     width: '50%',
                     zIndex: '10',
-                    '@media (min-width: 768px)': {
-                        top: '50%'
+                    h1: {
+                        '@media (min-width: 320px)': {
+                            fontSize: '2.5em'
+                        },
+                        '@media (min-width: 768px)': {
+                            fontSize: '2em'
+                        }
+                    },
+                    h3: {
+                        fontWeight: '100',
+                        '@media (min-width: 320px)': {
+                            fontSize: '1.8em'
+                        },
+                        '@media (min-width: 768px)': {
+                            fontSize: '1.3em'
+                        }
                     }
                 }
             }
@@ -75,8 +99,8 @@ class Hero extends React.Component {
                 <style>{this.props.html.replace(/<\/?style[^>]*>/g, '')}</style>
                 <section className='super-hero__content' style={options.styles.hero_content}>
                     {this.props.options.includes(options.category) && <CategoryTag category={this.props.category} />}
-                    <h1>{this.props.title}</h1>
-                    <h3>{this.props.sell}</h3>
+                    <h1 style={options.styles.hero_content.h1}>{this.props.title}</h1>
+                    <h3 style={options.styles.hero_content.h3}>{this.props.sell}</h3>
                 </section>
                 {this.props.options.includes(options.scroll_down_button) && <ScrollButton />}
             </article>
